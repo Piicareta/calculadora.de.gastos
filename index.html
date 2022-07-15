@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@500&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="./assets/img/favicon.ico" type="image/x-icon">
+    <title>Calculadora de Gastos</title>
+</head>
+<body>
+    <div class="main">
+        <div class="inputs">
+            <h1>Calculadora de Gastos</h1>
+            <h2>Potência em Watts (W)</h2>
+                <input type="number" id="potencia" placeholder="Ex.: 3200"><br>
+                <input type="button" value="Calcular" onclick="calcularValor()" class="desligado" id="botao">
+        </div>
+        <div class="gastos" id="gastos">
+            <h3>Horas (<span id="horas"> 1 </span>) : <span id="hora"></span></h3>
+                <button type="button" id="mais">+</button>
+                <button type="button" id="menos">–</button>
+            <h3>Semana : <span id="semana"></span></h3><br>
+            <h3>Mês : <span id="mes"></span></h3>
+        </div>
+    </div>
+    <script src="./assets/js/script.js"></script>
+</body>
+</html>

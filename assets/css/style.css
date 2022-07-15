@@ -1,0 +1,140 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Montserrat Alternates', sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    display: grid;
+    place-items: center;
+    background-color: rgb(20,20,20);
+}
+
+.main {
+    height: 650px;
+    width: 500px;
+    border-radius: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(20,20,20);
+    border: 5px solid orange;
+    box-shadow: 0 0 2em orange, inset 0 0 1em black;
+    flex-wrap: wrap;
+    animation: anima 3s infinite linear;
+}
+
+.inputs {
+    text-align: center;
+    line-height: 3rem;
+    color: rgb(255, 166, 0);
+    font-size: 18px;
+}
+
+input[type=number] {
+    -moz-appearance: textfield;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.gastos {
+    opacity: 0;
+    line-height: 2.5rem;
+    margin-top: 3rem;
+    font-size: 25px;
+    color: orange;
+    transition: 1s ease-in-out;
+}
+
+.show {
+    opacity: 1;
+}
+
+#potencia {
+    border-radius: 30px;
+    height: 25px;
+    width: 160px;
+    padding: 15px 25px 15px 25px;
+    font-size: 20px;
+    outline: none;
+    border: 3px solid orange;
+    background-color: rgb(20,20,20);
+    box-shadow: 0 0 0em orange, inset 0 0 1em black;
+    color: orange;
+    margin: 25px 0;
+    transition: 300ms ease-in-out;
+}
+
+#potencia:focus::placeholder {
+    opacity: 0;
+}
+
+#potencia:focus {
+    box-shadow: 0 0 2em orange, inset 0 0 1em black;
+}
+
+#potencia::placeholder {
+    opacity: 1;
+    color: rgb(255, 166, 0, 0.5);
+    transition: 300ms ease-in-out;
+}
+
+#botao:hover {
+    text-shadow: 0 0 1.5em orange;
+}
+
+.desligado {
+    font-size: 25px;
+    padding: 10px 45px;
+    margin-top: 15px;
+    cursor: pointer;
+    background-color: rgb(20,20,20);
+    box-shadow: 0 0 0em orange, inset 0 0 1em black;
+    color: orange;
+    border: 3px solid orange;
+    border-radius: 30px;
+    transition: 300ms ease-in-out;
+}
+
+.ligado {
+    box-shadow: 0 0 2em orange;
+    text-shadow: none;
+    color: rgb(20,20,20);
+    background-color: orange;
+}
+
+button {
+    font-size: 25px;
+    padding: 5px 13px;
+    margin: 10px 0;
+    cursor: pointer;
+    background-color: rgb(20,20,20);
+    box-shadow: 0 0 0em orange, inset 0 0 1em black;
+    color: orange;
+    border: 3px solid orange;
+    border-radius: 30px;
+    transition: 300ms ease-in-out;
+}
+#menos {
+    padding-top: 2.7px;
+    padding-bottom: 8px;
+    margin-left: 15px;
+    position: relative;
+    top: -3px;
+}
+button:hover {
+    box-shadow: 0 0 0.5em orange, inset 0 0 1em black;
+}
+
+@keyframes anima {
+    50% {
+        box-shadow: 0 0 3em rgb(255, 199, 95), inset 0 0 1em black;
+        border: 5px solid rgb(255, 199, 95);
+    }
+}
