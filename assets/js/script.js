@@ -2,7 +2,7 @@
 let base = 1
 
 function calcularValor() {
-
+    
     let potencia = document.getElementById('potencia').value
     potencia = potencia.replace('e', '')
     let preco = (0.75*100)/100
@@ -39,3 +39,12 @@ document.getElementById('menos').onclick = function () {
     document.getElementById('horas').innerHTML = ` ${base} `
     calcularValor()
 }
+
+document.addEventListener('keypress', function (x) {
+
+    if(x.key === 'Enter') {
+
+        calcularValor()                
+    }
+ 
+})
