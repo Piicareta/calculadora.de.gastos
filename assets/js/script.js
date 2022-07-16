@@ -1,12 +1,11 @@
 
 let base = 1
+let potencia = document.getElementById('potencia')
 
 function calcularValor() {
-    
-    let potencia = document.getElementById('potencia').value
-    potencia = potencia.replace('e', '')
+
     let preco = (0.75*100)/100
-    let gasto = Math.abs(potencia/1000)*preco
+    let gasto = Math.abs(potencia.value/1000)*preco
     
     let resultado = gasto*base
     resultado = resultado.toFixed(2)
@@ -40,11 +39,27 @@ document.getElementById('menos').onclick = function () {
     calcularValor()
 }
 
-document.addEventListener('keypress', function (x) {
+document.getElementById('botao').onclick = function () {
 
-    if(x.key === 'Enter') {
+    if (potencia.value === '') {
+        alert('Preencha o campo Watts (W).')
+    }
 
+    else {
         calcularValor()                
     }
- 
+}
+
+document.addEventListener('keypress', function (x) {
+
+    if (x.key === 'Enter') {
+
+        if (potencia.value === '') {
+            alert('Preencha o campo Watts (W).')
+        }
+
+        else {
+            calcularValor()                
+        }
+    }
 })
